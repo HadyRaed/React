@@ -7,9 +7,14 @@ const App = () => {
     { title: "Medical Insurance", amount: 241, date: new Date(2020, 12, 11) },
     { title: "Club Insurance", amount: 124.67, date: new Date(2021, 2, 15) },
   ];
+  const addExpenseHandler=(expense)=>{
+
+    console.log("App.js");
+    console.log(expense);
+}
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler}/>
       <Expenses items={expenses} />
     </div>
   );
